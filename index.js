@@ -6,7 +6,7 @@ const keypair = new driver.Ed25519Keypair()
 const conn = new driver.Connection(API_PATH)
 
 const tx = driver.Transaction.makeCreateTransaction({ message: "Hello Blockchain Class!" },
-        { meta: "data" },
+        { location: "Sent from Vienna" },
         [driver.Transaction.makeOutput(driver.Transaction.makeEd25519Condition(keypair.publicKey))],
         keypair.publicKey)
 
